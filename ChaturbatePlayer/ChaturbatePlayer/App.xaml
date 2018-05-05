@@ -1,0 +1,53 @@
+﻿<Application
+    x:Class="ChaturbatePlayer.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:ChaturbatePlayer.Converters"
+    xmlns:local="clr-namespace:ChaturbatePlayer"
+    ShutdownMode="OnMainWindowClose"
+    Startup="Application_Startup">
+    <Application.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+        <c:GenderToImageConverter x:Key="GenderToImage" />
+        <c:InverseBooleanToVisibilityConverter x:Key="InverseBoolToVisibility" />
+        <c:InverseBooleanConverter x:Key="InverseBool" />
+
+        <SolidColorBrush x:Key="BackgroundOrangeBrush" Color="#fceadb" />
+        <SolidColorBrush x:Key="BackgroundWhiteBrush" Color="#ffffff" />
+        <SolidColorBrush x:Key="BackgroundBlueBrush" Color="#dde9f5" />
+        <SolidColorBrush x:Key="BackgroundGrayBrush" Color="#f0f1f1" />
+
+        <SolidColorBrush x:Key="BorderBlueBrush" Color="#8bb3da" />
+        <SolidColorBrush x:Key="BorderGrayBrush" Color="#acacac" />
+        <SolidColorBrush x:Key="BorderGrayHilightingBrush" Color="#dde9f5" />
+
+        <SolidColorBrush x:Key="ForegroundOrangeBrush" Color="#dc5500" />
+        <SolidColorBrush x:Key="ForegroundBlueBrush" Color="#0a5a83" />
+        <SolidColorBrush x:Key="ForegroundGrayBrush" Color="#575757" />
+
+        <Style x:Key="Spinner" TargetType="Image">
+            <Setter Property="Height" Value="16" />
+            <Setter Property="Image.RenderTransform">
+                <Setter.Value>
+                    <RotateTransform CenterX="8" CenterY="8" />
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    RepeatBehavior="Forever"
+                                    Storyboard.TargetProperty="RenderTransform.Angle"
+                                    From="0"
+                                    To="360"
+                                    Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>

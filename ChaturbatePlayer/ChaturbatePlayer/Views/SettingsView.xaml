@@ -1,0 +1,177 @@
+﻿<ContentControl
+    x:Class="ChaturbatePlayer.Views.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ChaturbatePlayer.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:ChaturbatePlayer.ViewModels"
+    d:DesignWidth="780"
+    mc:Ignorable="d">
+    <ContentControl.DataContext>
+        <vm:SettingsViewModel />
+    </ContentControl.DataContext>
+    <ContentControl.Resources>
+        <Style x:Key="LockIconStyle" TargetType="Image">
+            <Setter Property="Width" Value="16" />
+            <Setter Property="Height" Value="16" />
+            <Setter Property="Source" Value="/ChaturbatePlayer;component/Images/Lock.png" />
+        </Style>
+    </ContentControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--  About  -->
+        <Grid Margin="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <!--  Product Information  -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="/ChaturbatePlayer;component/Images/Logo.png" />
+                <StackPanel Grid.Column="1">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Margin" Value="8,2,0,2" />
+                            <Setter Property="Foreground" Value="{StaticResource ResourceKey=ForegroundGrayBrush}" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock
+                        FontWeight="Bold"
+                        Foreground="{StaticResource ResourceKey=ForegroundOrangeBrush}"
+                        Text="{Binding Path=ProductName, Mode=OneTime}" />
+                    <TextBlock Text="{Binding Path=ProductVersion, StringFormat='Version {0}', Mode=OneTime}" />
+                    <TextBlock Text="{Binding Path=ProductDescription, Mode=OneTime}" />
+                    <TextBlock Text="{Binding Path=ProductCopyright, Mode=OneTime}" />
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="1">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="{StaticResource ResourceKey=ForegroundBlueBrush}" />
+                        <Setter Property="TextWrapping" Value="Wrap" />
+                        <Setter Property="Margin" Value="2" />
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock Text="Chaturbate is a popular webcam site where amateurs live stream erotic or pornographic performances. The site is divided into four categories: female cams, male cams, couple cams and transsexual cams. This application is a redefined way to view live cam feeds from Chaturbate. It also allows viewing video feeds in external media players for greater viewing (and optional saving) experience. It's NOT A REPLACEMENT of Chaturbate.com, it's just a cam video feed viewer. For chatting, tipping models and other stuff you will have to visit Chaturbate website." />
+            </StackPanel>
+        </Grid>
+
+        <!--  Settings  -->
+        <GroupBox
+            Grid.Row="1"
+            Margin="2"
+            BorderBrush="{StaticResource ResourceKey=BorderGrayBrush}">
+            <GroupBox.Header>
+                <TextBlock
+                    Margin="4,0,0,0"
+                    FontWeight="Bold"
+                    Foreground="{StaticResource ResourceKey=ForegroundOrangeBrush}"
+                    Text="Settings" />
+            </GroupBox.Header>
+            <StackPanel Orientation="Vertical">
+                <StackPanel.Resources>
+                    <Style TargetType="CheckBox">
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="Margin" Value="4" />
+                    </Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="{StaticResource ResourceKey=ForegroundGrayBrush}" />
+                        <Setter Property="FontWeight" Value="DemiBold" />
+                    </Style>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Orientation" Value="Horizontal" />
+                    </Style>
+                    <Style BasedOn="{StaticResource ResourceKey=LockIconStyle}" TargetType="Image">
+                        <Setter Property="Margin" Value="2,0,0,0" />
+                    </Style>
+                </StackPanel.Resources>
+                <CheckBox IsChecked="{Binding Path=Settings.IsMinutesLiveShown, Mode=TwoWay}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Show number of minutes live and viewers count for every room." />
+                    </StackPanel>
+
+                </CheckBox>
+                <CheckBox IsChecked="{Binding Path=Settings.IsAutoRefreshEnabled, Mode=TwoWay}">
+                    <StackPanel>
+                        <TextBlock Text="Refresh rooms list every " />
+                        <ComboBox
+                            Width="36"
+                            IsEnabled="{Binding Path=Settings.IsAutoRefreshEnabled}"
+                            ItemsSource="{Binding Path=RefreshIntervals}"
+                            SelectedItem="{Binding Path=Settings.RefreshInterval, Mode=TwoWay}" />
+                        <TextBlock Text=" minutes." />
+                    </StackPanel>
+                </CheckBox>
+                <CheckBox IsChecked="{Binding Path=Settings.IsExternalMediaPlayerAllowed, Mode=TwoWay}">
+                    <StackPanel>
+                        <TextBlock Text="Allow opening room's video feed in external " />
+                        <ComboBox
+                            Width="80"
+                            IsEnabled="{Binding Path=Settings.IsExternalMediaPlayerAllowed}"
+                            ItemsSource="{Binding Path=MediaPlayers}"
+                            SelectedItem="{Binding Path=Settings.MediaPlayer, Mode=TwoWay}" />
+                        <TextBlock Text=" media player for best viewing experience." />
+                    </StackPanel>
+                </CheckBox>
+                <CheckBox IsChecked="{Binding Path=Settings.IsExternalMediaPlayerControlsHidden, Mode=TwoWay}">
+                    <TextBlock Text="Hide external media player controls for seamless viewing. (VLC Only)" />
+                </CheckBox>
+                <CheckBox IsChecked="{Binding Path=Settings.IsExternalMediaPlayerFullScreen, Mode=TwoWay}">
+                    <TextBlock Text="Show full screen external media player. (VLC Only)" />
+                </CheckBox>
+                <CheckBox IsChecked="{Binding Path=Settings.IsAutoPauseEnabled, Mode=TwoWay}">
+                    <TextBlock Text="Automatically pause &amp; resume video feed when tab is switched to save bandwidth." />
+                </CheckBox>
+                <CheckBox IsChecked="{Binding Path=Settings.IsAutoSaveVideosEnabled, Mode=TwoWay}">
+                    <StackPanel>
+                        <TextBlock Text="Automatically record video feed to " />
+                        <Border
+                            Padding="1"
+                            Background="{StaticResource BackgroundBlueBrush}"
+                            BorderBrush="{StaticResource BorderBlueBrush}"
+                            BorderThickness="1"
+                            IsEnabled="{Binding Path=Settings.IsAutoSaveVideosEnabled}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox
+                                    Width="160"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    FontWeight="Bold"
+                                    Foreground="{StaticResource ForegroundBlueBrush}"
+                                    Text="{Binding Path=Settings.AutoSaveDirectory, Mode=TwoWay}" />
+                                <Button
+                                    Grid.Column="1"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Command="{Binding Path=SelectDirectoryCommand, Mode=OneTime}"
+                                    CommandParameter="Select directory in which you want to automatically record video feed."
+                                    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                                    ToolTip="...">
+                                    <Image Source="/ChaturbatePlayer;component/Images/FolderOpen.png" />
+                                </Button>
+                            </Grid>
+                        </Border>
+                        <TextBlock Text=" directory when opened in external media player. (VLC Only)" />
+                    </StackPanel>
+                </CheckBox>
+                <CheckBox IsChecked="{Binding Path=Settings.IsUrlShown, Mode=TwoWay}">
+                    <TextBlock Text="Show URL insted of room's name in title of external media player. (VLC Only)" />
+                </CheckBox>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</ContentControl>
