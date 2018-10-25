@@ -1,14 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChaturbatePlayer", "ChaturbatePlayer\ChaturbatePlayer.csproj", "{F9AFA7E1-F72A-4AA7-95B2-5813337B984F}"
-EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "ChaturbatePlayer.Setup", "ChaturbatePlayer.Setup\ChaturbatePlayer.Setup.isproj", "{A6CC3D12-E732-4B82-BC90-643862798070}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F9AFA7E1-F72A-4AA7-95B2-5813337B984F} = {F9AFA7E1-F72A-4AA7-95B2-5813337B984F}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,36 +54,11 @@ Global
 		{F9AFA7E1-F72A-4AA7-95B2-5813337B984F}.SingleImage|x64.Build.0 = Release|x64
 		{F9AFA7E1-F72A-4AA7-95B2-5813337B984F}.SingleImage|x86.ActiveCfg = Release|x86
 		{F9AFA7E1-F72A-4AA7-95B2-5813337B984F}.SingleImage|x86.Build.0 = Release|x86
-		{A6CC3D12-E732-4B82-BC90-643862798070}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
-		{A6CC3D12-E732-4B82-BC90-643862798070}.CD_ROM|Any CPU.Build.0 = CD_ROM
-		{A6CC3D12-E732-4B82-BC90-643862798070}.CD_ROM|x64.ActiveCfg = CD_ROM
-		{A6CC3D12-E732-4B82-BC90-643862798070}.CD_ROM|x64.Build.0 = CD_ROM
-		{A6CC3D12-E732-4B82-BC90-643862798070}.CD_ROM|x86.ActiveCfg = CD_ROM
-		{A6CC3D12-E732-4B82-BC90-643862798070}.CD_ROM|x86.Build.0 = CD_ROM
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Debug|Any CPU.ActiveCfg = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Debug|x64.ActiveCfg = DVD-5
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Debug|x64.Build.0 = DVD-5
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Debug|x86.ActiveCfg = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.DVD-5|Any CPU.ActiveCfg = DVD-5
-		{A6CC3D12-E732-4B82-BC90-643862798070}.DVD-5|Any CPU.Build.0 = DVD-5
-		{A6CC3D12-E732-4B82-BC90-643862798070}.DVD-5|x64.ActiveCfg = DVD-5
-		{A6CC3D12-E732-4B82-BC90-643862798070}.DVD-5|x64.Build.0 = DVD-5
-		{A6CC3D12-E732-4B82-BC90-643862798070}.DVD-5|x86.ActiveCfg = DVD-5
-		{A6CC3D12-E732-4B82-BC90-643862798070}.DVD-5|x86.Build.0 = DVD-5
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Release|Any CPU.ActiveCfg = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Release|Any CPU.Build.0 = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Release|x64.ActiveCfg = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Release|x64.Build.0 = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Release|x86.ActiveCfg = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.Release|x86.Build.0 = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.SingleImage|Any CPU.ActiveCfg = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.SingleImage|Any CPU.Build.0 = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.SingleImage|x64.ActiveCfg = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.SingleImage|x64.Build.0 = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.SingleImage|x86.ActiveCfg = SingleImage
-		{A6CC3D12-E732-4B82-BC90-643862798070}.SingleImage|x86.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {008E0EBB-72BF-422E-9835-27BEBD89C217}
 	EndGlobalSection
 EndGlobal
