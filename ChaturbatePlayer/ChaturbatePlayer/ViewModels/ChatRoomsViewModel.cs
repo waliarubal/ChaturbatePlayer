@@ -31,7 +31,7 @@ namespace ChaturbatePlayer.ViewModels
         Timer _refreshTimer;
         volatile int _page;
 
-        const string CHATURBATE = "http://www.chaturbate.com";
+        const string CHATURBATE = "https://www.chaturbate.com";
         const string HOST = "chaturbate.com";
 
         #region constructor/destructor
