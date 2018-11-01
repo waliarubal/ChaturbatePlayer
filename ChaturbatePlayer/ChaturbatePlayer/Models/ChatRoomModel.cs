@@ -42,16 +42,13 @@ namespace ChaturbatePlayer.Models
 
         public string Name
         {
-            get { return _name; }
-            set
-            {
-                Set(nameof(Name), ref _name, value);
-            }
+            get => _name;
+            set => Set(nameof(Name), ref _name, value);
         }
 
         public int Age
         {
-            get { return _age; }
+            get => _age;
             set
             {
                 Set(nameof(Age), ref _age, value);
@@ -60,7 +57,7 @@ namespace ChaturbatePlayer.Models
 
         public Gender Gender
         {
-            get { return _gender; }
+            get => _gender;
             set
             {
                 Set(nameof(Gender), ref _gender, value);
@@ -69,7 +66,7 @@ namespace ChaturbatePlayer.Models
 
         public string ProfileUrl
         {
-            get { return _profileUrl; }
+            get => _profileUrl;
             set
             {
                 Set(nameof(ProfileUrl), ref _profileUrl, value);
@@ -78,7 +75,7 @@ namespace ChaturbatePlayer.Models
 
         public int Height
         {
-            get { return _height; }
+            get => _height;
             set
             {
                 Set(nameof(Height), ref _height, value);
@@ -87,7 +84,7 @@ namespace ChaturbatePlayer.Models
 
         public int Width
         {
-            get { return _width; }
+            get => _width;
             set
             {
                 Set(nameof(Width), ref _width, value);
@@ -96,7 +93,7 @@ namespace ChaturbatePlayer.Models
 
         public string ProfileImageUrl
         {
-            get { return _profileImageUrl; }
+            get => _profileImageUrl;
             set
             {
                 Set(nameof(ProfileImageUrl), ref _profileImageUrl, value);
@@ -105,7 +102,7 @@ namespace ChaturbatePlayer.Models
 
         public string RoomTitle
         {
-            get { return _roomTitle; }
+            get => _roomTitle;
             set
             {
                 Set(nameof(RoomTitle), ref _roomTitle, value);
@@ -114,7 +111,7 @@ namespace ChaturbatePlayer.Models
 
         public string VideoFeedUrl
         {
-            get { return _videoFeedUrl; }
+            get => _videoFeedUrl;
             set
             {
                 Set(nameof(VideoFeedUrl), ref _videoFeedUrl, value);
@@ -123,7 +120,7 @@ namespace ChaturbatePlayer.Models
 
         public bool IsVideoFeedHd
         {
-            get { return _isVideoFeedHd; }
+            get => _isVideoFeedHd;
             set
             {
                 Set(nameof(IsVideoFeedHd), ref _isVideoFeedHd, value);
@@ -132,7 +129,7 @@ namespace ChaturbatePlayer.Models
 
         public string CamsCount
         {
-            get { return _camsCount; }
+            get => _camsCount;
             set
             {
                 Set(nameof(CamsCount), ref _camsCount, value);
