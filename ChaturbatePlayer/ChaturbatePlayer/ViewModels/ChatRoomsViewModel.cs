@@ -245,7 +245,7 @@ namespace ChaturbatePlayer.ViewModels
                 var profileUrl = string.Format("{0}{1}", CHATURBATE, tempNode.Attributes["href"].Value);
 
                 tempNode = node.SelectSingleNode("./div[@class='details']/div[@class='title']/span[contains(@class,'age')]");
-                var age = int.Parse(tempNode.InnerText);
+                int.TryParse(tempNode.InnerText, out int age);
                 var genderString = tempNode.Attributes["class"].Value;
                 Gender gender;
                 if (genderString.Contains("genderm"))
