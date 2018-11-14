@@ -13,9 +13,7 @@ namespace ChaturbatePlayer.Models
 
     public class ChatRoomModel : NotificationBase
     {
-        string _name, _profileUrl, _profileImageUrl, _roomTitle, _videoFeedUrl, _camsCount;
-        int _height, _width, _age;
-        Gender _gender;
+        string _camsCount;
         bool _isVideoFeedHd;
 
         public ChatRoomModel(
@@ -40,100 +38,34 @@ namespace ChaturbatePlayer.Models
 
         #region properties
 
-        public string Name
-        {
-            get => _name;
-            set => Set(nameof(Name), ref _name, value);
-        }
+        public string Name { get; }
 
-        public int Age
-        {
-            get => _age;
-            set
-            {
-                Set(nameof(Age), ref _age, value);
-            }
-        }
+        public int Age { get; }
 
-        public Gender Gender
-        {
-            get => _gender;
-            set
-            {
-                Set(nameof(Gender), ref _gender, value);
-            }
-        }
+        public Gender Gender { get; }
 
-        public string ProfileUrl
-        {
-            get => _profileUrl;
-            set
-            {
-                Set(nameof(ProfileUrl), ref _profileUrl, value);
-            }
-        }
+        public string ProfileUrl { get; }
 
-        public int Height
-        {
-            get => _height;
-            set
-            {
-                Set(nameof(Height), ref _height, value);
-            }
-        }
+        public int Height { get; }
 
-        public int Width
-        {
-            get => _width;
-            set
-            {
-                Set(nameof(Width), ref _width, value);
-            }
-        }
+        public int Width { get; }
 
-        public string ProfileImageUrl
-        {
-            get => _profileImageUrl;
-            set
-            {
-                Set(nameof(ProfileImageUrl), ref _profileImageUrl, value);
-            }
-        }
+        public string ProfileImageUrl { get; }
 
-        public string RoomTitle
-        {
-            get => _roomTitle;
-            set
-            {
-                Set(nameof(RoomTitle), ref _roomTitle, value);
-            }
-        }
+        public string RoomTitle { get; }
 
-        public string VideoFeedUrl
-        {
-            get => _videoFeedUrl;
-            set
-            {
-                Set(nameof(VideoFeedUrl), ref _videoFeedUrl, value);
-            }
-        }
+        public string VideoFeedUrl { get; }
 
         public bool IsVideoFeedHd
         {
             get => _isVideoFeedHd;
-            set
-            {
-                Set(nameof(IsVideoFeedHd), ref _isVideoFeedHd, value);
-            }
+            set =>  Set(nameof(IsVideoFeedHd), ref _isVideoFeedHd, value);
         }
 
         public string CamsCount
         {
             get => _camsCount;
-            set
-            {
-                Set(nameof(CamsCount), ref _camsCount, value);
-            }
+            set =>  Set(nameof(CamsCount), ref _camsCount, value);
         }
 
         #endregion
