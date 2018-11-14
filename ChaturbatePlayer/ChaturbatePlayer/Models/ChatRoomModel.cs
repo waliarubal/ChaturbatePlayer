@@ -13,7 +13,7 @@ namespace ChaturbatePlayer.Models
 
     public class ChatRoomModel : NotificationBase
     {
-        string _camsCount;
+        string _camsCount, _videoFeedUrl;
         bool _isVideoFeedHd;
 
         public ChatRoomModel(
@@ -54,7 +54,11 @@ namespace ChaturbatePlayer.Models
 
         public string RoomTitle { get; }
 
-        public string VideoFeedUrl { get; }
+        public string VideoFeedUrl
+        {
+            get => _videoFeedUrl;
+            set => Set(nameof(VideoFeedUrl), ref _videoFeedUrl, value);
+        }
 
         public bool IsVideoFeedHd
         {
