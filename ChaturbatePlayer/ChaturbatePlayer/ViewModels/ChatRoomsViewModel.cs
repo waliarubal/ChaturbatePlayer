@@ -235,7 +235,7 @@ namespace ChaturbatePlayer.ViewModels
                 var profileImageWidth = int.Parse(tempNode.Attributes["width"].Value);
 
                 tempNode = node.SelectSingleNode("./div[contains(@class,'thumbnail_label')]");
-                var isVideoFeedHd = tempNode.InnerText.Equals("HD", System.StringComparison.InvariantCultureIgnoreCase);
+                var isVideoFeedHd = tempNode.InnerText.Equals("HD", StringComparison.InvariantCultureIgnoreCase);
 
                 tempNode = node.SelectSingleNode("./div/ul[@class='subject']/li");
                 var title = tempNode.Attributes["title"].Value;

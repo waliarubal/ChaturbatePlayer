@@ -3,7 +3,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:c="clr-namespace:ChaturbatePlayer.Converters"
-    xmlns:local="clr-namespace:ChaturbatePlayer"
     ShutdownMode="OnMainWindowClose"
     Startup="Application_Startup">
     <Application.Resources>
