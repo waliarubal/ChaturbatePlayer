@@ -104,14 +104,14 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.11.12.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.11.12\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.11.17.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.17\lib\Net40\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\NullVoidCreations.WpfHelpers.19.8.6.550\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+      <HintPath>..\packages\NullVoidCreations.WpfHelpers.19.8.7.1139\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
-    <Reference Include="NullVoidCreations.WpfHelpers, Version=19.8.6.550, Culture=neutral, PublicKeyToken=203b8d613f6ac171, processorArchitecture=MSIL">
-      <HintPath>..\packages\NullVoidCreations.WpfHelpers.19.8.6.550\lib\net40\NullVoidCreations.WpfHelpers.dll</HintPath>
+    <Reference Include="NullVoidCreations.WpfHelpers, Version=19.8.7.1139, Culture=neutral, PublicKeyToken=203b8d613f6ac171, processorArchitecture=MSIL">
+      <HintPath>..\packages\NullVoidCreations.WpfHelpers.19.8.7.1139\lib\net40\NullVoidCreations.WpfHelpers.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -120,7 +120,7 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\NullVoidCreations.WpfHelpers.19.8.6.550\lib\net40\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\NullVoidCreations.WpfHelpers.19.8.7.1139\lib\net40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -146,9 +146,8 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration" />
-    <Reference Include="WpfBindingErrors, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WpfBindingErrors.1.0\lib\net40\WpfBindingErrors.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="WpfBindingErrors, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfBindingErrors.1.1.0\lib\net40\WpfBindingErrors.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
